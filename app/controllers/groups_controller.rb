@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
   def index
-    # Your code here
+    @categories = Group.all
   end
 end

@@ -1,0 +1,15 @@
+<h1>Categories</h1>
+<h2>groups#index.html.erb</h2>
+<ul>
+    <% @categories.each do |category| %>
+        <li>
+            <%= image_tag url_for(category.icon), alt: "User Image" %>
+            <h2>
+                <%= category.name %>
+            </h2>
+            <h3>
+                <%= category.amount %>
+            </h3>
+        </li>
+    <% end %>
+</ul>
