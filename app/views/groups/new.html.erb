@@ -1,0 +1,11 @@
+<%= form_with model: Group.new, url: groups_path(current_user) do |form| %>
+    <div>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
+    </div>
+    <div>
+        <%= form.file_field :icon %>
+    </div>
+
+    <%= form.submit "create category"%>
+<% end %>

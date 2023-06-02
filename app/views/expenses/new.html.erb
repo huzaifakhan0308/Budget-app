@@ -1,0 +1,16 @@
+<%= form_with model: Expense.new, url: group_expenses_path(current_user) do |form| %>
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <%= form.label :amount %>
+        <%= form.number_field :amount %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :categories %>
+        <%= form.collection_select :groups_id, current_user.groups, :id, :name, {prompt: "Select Ingedient"}, {class: "form-select"} %>
+    </div>
+
+    <%= form.submit "create category"%>
+<% end %>

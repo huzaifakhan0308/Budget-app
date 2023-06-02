@@ -1,7 +1,121 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+
+img {
+  height: 100%;
+}
+
+body,
+#login_page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#login_page-container {
+  justify-content: center;
+}
+
+#login_page-container h1 {
+  display: flex;
+  justify-content: center;
+  width: 25vh;
+  margin-bottom: 20vh;
+  color: rgba(0, 0, 0, 0.498);
+}
+
+#login_page-container div {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10vh;
+  width: 32vh;
+}
+
+#login_page-container button {
+  width: 100%;
+  height: 5vh;
+  margin-top: 1vh;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.604);
+  border-radius: 5px;
+}
+
+#login_page-container #login-button {
+  background-color: #3778c2;
+  color: white;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 6vh;
+  color: rgba(255, 255, 255, 0.945);
+  background-color: #3778c2;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 95%;
+  list-style: none;
+}
+
+header nav ul li img {
+  height: 4vh;
+}
+
+#login-form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+#login-form-container input {
+  width: 33vh;
+  height: 5vh;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 1vh;
+}
+
+#login-form-container .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  background-color: #5fb523;
+  margin-bottom: 3vh;
+}
+
+#login-form-container #submit-btn {
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 0;
+  width: 95%;
+  color: white;
 }
