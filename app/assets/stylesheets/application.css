@@ -11,24 +11,30 @@ img {
   height: 100%;
 }
 
-body,
-#login_page-container {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  max-width: 426px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 #login_page-container {
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.826);
 }
 
 #login_page-container h1 {
   display: flex;
   justify-content: center;
-  width: 25vh;
+  width: 92%;
   margin-bottom: 20vh;
   color: rgba(0, 0, 0, 0.498);
 }
@@ -36,14 +42,20 @@ body,
 #login_page-container div {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  bottom: 0;
+  align-items: center;
   margin-bottom: 10vh;
-  width: 32vh;
+  width: 100%;
+}
+
+#login_page-container div a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
 }
 
 #login_page-container button {
-  width: 100%;
+  width: 95%;
   height: 5vh;
   margin-top: 1vh;
   border: none;
@@ -59,6 +71,7 @@ body,
 
 header {
   width: 100%;
+  position: fixed;
 }
 
 header nav {
@@ -82,7 +95,14 @@ header nav ul {
 }
 
 header nav ul li img {
-  height: 4vh;
+  height: 3vh;
+}
+
+header nav ul li button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 15px;
+  color: white;
 }
 
 #login-form-container {
@@ -90,11 +110,22 @@ header nav ul li img {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 5vh;
+  margin-top: 7vh;
+  background-color: white;
 }
 
-#login-form-container input {
-  width: 33vh;
+#login-form-container form {
+  width: 100%;
+}
+
+#login-form-container form div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#login-form-container form div input {
+  width: 95%;
   height: 5vh;
   outline: none;
   border: none;
@@ -117,5 +148,261 @@ header nav ul li img {
   background-color: rgba(0, 0, 0, 0);
   margin-bottom: 0;
   width: 95%;
+  color: white;
+}
+
+#groups-index {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 7vh;
+  margin-bottom: 9vh;
+  min-height: 89vh;
+}
+
+#groups-index ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#groups-index ul a {
+  width: 95%;
+  text-decoration: none;
+  color: black;
+}
+
+#groups-index ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 11vh;
+  margin-top: 1vh;
+  background-color: white;
+  border-radius: 3px;
+}
+
+#groups-index ul li div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.505);
+}
+
+#groups-index ul li img {
+  height: 10vh;
+  width: 10vh;
+}
+
+#groups-index ul li h3 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#groups-index #Add-new-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  margin-top: 3vh;
+  position: fixed;
+  bottom: 0;
+  background-color: #5fb523;
+}
+
+#groups-index #Add-new-btn .button_to {
+  width: 95%;
+}
+
+#groups-index #Add-new-btn #button {
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 5vh;
+  color: white;
+}
+
+#groups-new {
+  width: 100%;
+  background-color: white;
+  margin-top: 10vh;
+}
+
+#groups-new form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#groups-new form #div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#groups-new form #div input {
+  width: 95%;
+  height: 6vh;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 2vh;
+}
+
+#groups-new form div input {
+  border-bottom: 1px solid black;
+}
+
+#groups-new form #actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  margin-top: 2vh;
+  background-color: #5fb523;
+}
+
+#groups-new form #actions #button {
+  width: 95%;
+  height: 5vh;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+#expense-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 6vh;
+}
+
+#expense-index #expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  background-color: white;
+  margin: 10px;
+}
+
+#expense-index #expenses #category-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 95%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.534);
+}
+
+#expense-index #expenses #category-info img {
+  width: 10vh;
+  height: 10vh;
+  margin: 10px 10px 10px 0;
+}
+
+#expense-index #expenses ul {
+  margin-top: 1vh;
+  width: 95%;
+  background-color: white;
+  border-radius: 3px;
+  list-style: none;
+}
+
+#expense-index #expenses ul li {
+  margin-top: 1vh;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.534);
+  opacity: 70%;
+}
+
+#expense-index #expenses ul li img {
+  width: 3vh;
+  height: 3vh;
+}
+
+#expense-index #total-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  background-color: white;
+  opacity: 70%;
+  margin-bottom: 5vh;
+}
+
+#expense-index a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+  text-decoration: none;
+}
+
+#expense-index a button {
+  width: 95%;
+  height: 5vh;
+  background-color: #0000;
+  border: 1px solid white;
+  color: white;
+}
+
+#expenses-new {
+  margin-top: 10vh;
+  width: 100%;
+  background-color: white;
+}
+
+#expenses-new form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#expenses-new form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#expenses-new form div input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 7vh;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#expenses-new form #actions {
+  width: 100%;
+  background-color: #5fb523;
+  height: 7vh;
+  margin-top: 10vh;
+}
+
+#expenses-new form #actions #button {
+  width: 95%;
+  background-color: #60b52300;
+  height: 5vh;
+  border: 1px solid white;
   color: white;
 }

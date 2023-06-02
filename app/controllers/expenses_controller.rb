@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
   def index
-    @expenses = Expense.where(groups_id: params[:group_id])
+    @expenses = Expense.where(groups_id: params[:group_id]).order(created_at: :desc)
+    @group = Group.where(id: params[:group_id]).take
   end
 
   def new; end

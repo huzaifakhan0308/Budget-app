@@ -31,7 +31,8 @@
                 ]
             }
         ],
-        "csstree/validator": true
+        "csstree/validator": true,
+        "no-descending-specificity": null
     },
     "ignoreFiles": [
         "build/**",
