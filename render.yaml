@@ -1,7 +1,7 @@
 databases:
   - name: postgres
     ipAllowList: []
-    databaseName: Budget_app_production
+    databaseName: Budget_app_development
     user: recipe_app
 
 services:
