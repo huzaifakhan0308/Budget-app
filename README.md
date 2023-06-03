@@ -5,6 +5,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -20,6 +21,10 @@
 
 > Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
+## 📹 video presentation <a name="video-presentation"></a>
+
+- <a href="https://www.loom.com/share/0174570f5e4042c1a1c7761c0a6da075">Video presentation link</a>
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -33,6 +38,10 @@
 - User can login
 - User can create a transaction
 - user can create a category
+
+## Live Demo <a name="live-demo"></a>
+
+  - <a href="https://budget-app-3j49.onrender.com/">Live Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
