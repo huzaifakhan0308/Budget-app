@@ -1,4 +1,7 @@
 <div id="expense-index">
+    <div id="total-amount">
+      <h2>Total amount: $<%= @expenses.sum(:amount) %></h2>
+    </div>
   <div id="expenses">
     <div id="category-info">
       <%= image_tag url_for(@group.icon), alt: "category icon" %>
@@ -19,9 +22,6 @@
           </li>
       <% end %>
     </ul>
-    <div id="total-amount">
-      <h2>Total amount: $<%= @expenses.sum(:amount) %></h2>
-    </div>
   </div>
   <%= link_to({ controller: 'expenses', action: 'new' }) do %>
     <button>Add new transaction</button>

@@ -10,6 +10,10 @@
                             <%= link_to image_tag('menu.png'), :back, id: "back-icon" %>
                         <% elsif request.path == "/groups/new" %>
                             <%= link_to image_tag('back.png'), groups_path, id: "back-icon" %>
+                        <% elsif request.path == group_expenses_path %>
+                            <%= link_to image_tag('back.png'), groups_path, id: "back-icon" %>
+                        <% elsif request.path == new_group_expense_path %>
+                            <%= link_to image_tag('back.png'), group_expenses_path, id: "back-icon" %>
                         <% else %>
                             <%= link_to image_tag('back.png'), :back, id: "back-icon" %>
                         <% end %>
