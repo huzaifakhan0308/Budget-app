@@ -1,0 +1,17 @@
+<div id="expenses-new">
+    <%= form_with model: Expense.new, url: group_expenses_path(current_user) do |form| %>
+        <div>
+            <%= form.text_field :name, placeholder: "Name" %>
+        </div>
+        <div>
+            <%= form.number_field :amount, placeholder: "Amount" %>
+        </div>
+        <div>
+            <%= form.label :categories %>
+            <%= form.collection_select :groups_id, current_user.groups, :id, :name, { prompt: "Select Ingedient"}, {class: "form-select"} %>
+        </div>
+        <div id="actions">
+            <%= form.submit "Save", id: "button" %>
+        </div>
+    <% end %>
+</div>

@@ -1,0 +1,22 @@
+<div id="groups-index">
+    <ul>
+        <% @categories.each do |category| %>
+            <%= link_to group_expenses_path(group_id: category.id) do %>
+                <li>
+                    <div>
+                        <%= image_tag url_for(category.icon), alt: "category icon" %>
+                        <h3>
+                            <%= category.name %>
+                        </h3>
+                    </div>
+                    <h3>
+                        $<%= Expense.where(groups_id: category.id).sum(:amount) %>
+                    </h3>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+    <div id="Add-new-btn">
+        <%= button_to "Add new category", { controller: 'groups', action: 'new' }, method: :get, id: "button" %>
+    </div>
+</div>

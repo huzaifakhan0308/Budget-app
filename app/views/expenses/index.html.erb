@@ -1,0 +1,29 @@
+<div id="expense-index">
+    <div id="total-amount">
+      <h2>Total amount: $<%= @expenses.sum(:amount) %></h2>
+    </div>
+  <div id="expenses">
+    <div id="category-info">
+      <%= image_tag url_for(@group.icon), alt: "category icon" %>
+      <%= @group.name %>
+    </div>
+    <ul>
+      <% @expenses.each do |expense| %>
+          <li>
+              <h2>
+                  <%= expense.name %>
+              </h2>
+              <h3>
+                  amount: $<%= expense.amount %>
+              </h3>
+              <h3>
+                <%= image_tag('calendar.png') %> <%= expense.created_at %>
+              </h3>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to({ controller: 'expenses', action: 'new' }) do %>
+    <button>Add new transaction</button>
+  <%end%>
+</div>

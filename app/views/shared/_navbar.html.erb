@@ -1,0 +1,51 @@
+<% if !user_signed_in? &&  request.path != "/" || user_signed_in? && request.path == "/" || user_signed_in? && request.path != "/" %>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <% if user_signed_in? %>
+                        <% if request.path == "/" %>
+                            <%= link_to image_tag('menu.png'), :back, id: "back-icon" %>
+                        <% elsif request.path == "/groups" %>
+                            <%= link_to image_tag('menu.png'), :back, id: "back-icon" %>
+                        <% elsif request.path == "/groups/new" %>
+                            <%= link_to image_tag('back.png'), groups_path, id: "back-icon" %>
+                        <% elsif request.path == group_expenses_path %>
+                            <%= link_to image_tag('back.png'), groups_path, id: "back-icon" %>
+                        <% elsif request.path == new_group_expense_path %>
+                            <%= link_to image_tag('back.png'), group_expenses_path, id: "back-icon" %>
+                        <% else %>
+                            <%= link_to image_tag('back.png'), :back, id: "back-icon" %>
+                        <% end %>
+                    <% else%>
+                        <%= link_to image_tag('back.png'), :back, id: "back-icon" %>
+                    <% end %>
+                </li>
+                <li>
+                    <% if request.path == "/users/sign_in" %>
+                        <h3>LOG IN</h3>
+                    <% elsif request.path == "/users/sign_up" %>
+                        <h3>SIGN UP</h3>
+                    <% elsif request.path == "/" %>
+                        <h3>CATEGORIES</h3>
+                    <% elsif request.path == "/groups" %>
+                        <h3>CATEGORIES</h3>
+                    <% elsif request.path == "/groups/new" %>
+                        <h3>ADD CATEGORY</h3>
+                    <% elsif request.path == group_expenses_path(params[:group_id]) %>
+                        <h3>TRANSACTIONS</h3>
+                    <% elsif request.path == new_group_expense_path(params[:group_id]) %>
+                        <h3>ADD TRANSACTIONS</h3>
+                    <% end %>
+                </li>
+                <li>
+                    <% if user_signed_in? %>
+                        <%= button_to "Log out", destroy_user_session_path, method: :delete%>
+                    <% else %>
+                        <%= button_to "Log in", new_user_session_path, method: :get %>
+                    <% end %>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<% end %>
